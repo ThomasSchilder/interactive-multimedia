@@ -47,6 +47,9 @@ if(req.url == "/"){
     rkd.rkdCall(q.fName, q.lName, function(data){
       res.end(JSON.stringify(data));
     });
+} else if(req.url.includes("/artwork.php?")){
+    res.redirect("https://lootedart.com/search" + req.url);
+    res.end();
 } else {
     res.writeHead(404, {'Content-Type': 'text/html'});
     res.write("Not found");
