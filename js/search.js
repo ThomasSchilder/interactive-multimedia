@@ -1,5 +1,5 @@
 function searchAll(){
-  document.getElementById("results").innerHTML = '<table><caption id="resultsAmount"></caption></table>';
+  document.getElementById("results").innerHTML = '<table><caption id="resultsAmount"></caption></table><br>';
   var fName = document.getElementById("fName").value;
   var lName = document.getElementById("lName").value;
   var title = document.getElementById("title").value;
@@ -38,7 +38,7 @@ function searchLootedArt(fName, lName, title, authority, nationality){
         Array.from (a).forEach (((x) => { x.setAttribute("target", "_blank"); }) );
         var results = data.split("Your search returned ")[1].split(" results")[0];
         var pages = Math.ceil(results/10);
-        document.getElementById("resultsAmount").innerHTML = document.getElementById("resultsAmount").innerHTML + "lootedart.com returned " + results.toString() + " results.<br>";
+        document.getElementById("resultsAmount").innerHTML = document.getElementById("resultsAmount").innerHTML + "lootedart.com returned " + results.toString() + " results<br>";
         
         for(let i = 1; i < pages; i++){
             j = i + 1;
@@ -93,7 +93,7 @@ function searchLostart(fName, lName, title, authority){
             Array.from (a).forEach (((x) => { x.setAttribute("target", "_blank"); }) );
             
             var results = data.split("<caption>")[1].split(" Search results")[0];
-            document.getElementById("resultsAmount").innerHTML = document.getElementById("resultsAmount").innerHTML + "lostart.de returned " + results.toString() + " results.<br>";
+            document.getElementById("resultsAmount").innerHTML = document.getElementById("resultsAmount").innerHTML + "lostart.de returned " + results.toString() + " results<br>";
         	var pages = Math.ceil(parseInt(results)/10);
         	console.log(pages);
         	var sucheId = data.split("SUCHE_ID%3D")[1].split("%")[0];
