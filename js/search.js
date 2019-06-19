@@ -83,8 +83,11 @@ function searchLostart(fName, lName, title, authority){
 	&kennz=\
 	&id=+477958&pubop=eq&pubop.GROUP=1&pubyear=&pubyear.GROUP=1&type.GROUP=1&suche_typ=MeldungDetail&suche_typ.HASH=1f7be21bf284266ab474&suchen=Search", function(data) {
 			htmlresults = new DOMParser().parseFromString(data, "text/html");
-		    var table = htmlresults.getElementsByTagName('table')[0].innerHTML;
-	        $('#results').append(table);
+			var tableEmpty = document.createElement("table");
+			tableEmpty.setAttribute("id", "emptyTable");
+			$('#results').append(tableEmpty);
+		    var table = htmlresults.getElementsByTagName('tbody')[0].innerHTML;
+	        $('#emptyTable').append(table);
 	        var a = document.getElementsByTagName("a");
             Array.from (a).forEach (((x) => { x.setAttribute("target", "_blank"); }) );
 	});
