@@ -6,6 +6,7 @@ function searchAll(){
   var nationality = document.getElementById("nationality").value;
   searchRkd(fName, lName);
   searchLootedArt(fName, lName, title, authority, nationality);
+  document.getElementById("lijntje").style.display = "block";
 }
 
 function searchLootedArt(fName, lName, title, authority, nationality){
