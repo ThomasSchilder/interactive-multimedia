@@ -113,7 +113,7 @@ function searchLostart(fName, lName, title, authority){
 			    	   var a = document.getElementsByTagName("a");
 			     	   Array.from (a).forEach (((x) => { x.setAttribute("target", "_blank"); }) );
 					});
-				}, (3000 * j));
+				}, (3000 * k));
             }
             }
 	});
