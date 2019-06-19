@@ -1,5 +1,5 @@
 function searchAll(){
-  document.getElementById("results").innerHTML = "";
+  document.getElementById("results").innerHTML = "<table><caption id="resultsAmount"></caption></table>";
   var fName = document.getElementById("fName").value;
   var lName = document.getElementById("lName").value;
   var title = document.getElementById("title").value;
