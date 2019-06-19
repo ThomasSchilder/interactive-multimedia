@@ -143,6 +143,7 @@ function searchHerkomstgezocht(fName, lName, title){
 			    var a = document.getElementsByTagName("a");
 			    Array.from (a).forEach (((x) => { x.setAttribute("target", "_blank"); }) );
 			});
+		}
 	});
 }
 
