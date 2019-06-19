@@ -92,15 +92,13 @@ function searchLostart(fName, lName, title, authority){
 	        var a = document.getElementsByTagName("a");
             Array.from (a).forEach (((x) => { x.setAttribute("target", "_blank"); }) );
             
-            let arr = [0, 1, 2, 3, 4, 5, 6 ,7 ,8, 9];
-            console.log(data.split("<caption>")[1][0]);
-            if(arr.findIndex(x => x == data.split("<caption>")[1][0]) > -1){
+            let arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+            if(arr.findIndex(x => x == data.split("<caption>")[1][0]) == -1){
             var results = data.split("<caption>")[1].split(" Search results")[0];
             document.getElementById("resultsAmount").innerHTML = document.getElementById("resultsAmount").innerHTML + "lostart.de returned " + results.toString() + " results<br>";
         	var pages = Math.ceil(parseInt(results)/10);
         	console.log(pages);
         	var sucheId = data.split("SUCHE_ID%3D")[1].split("%")[0];
-        	console.log(sucheId);
         	for(let i = 0; i < pages-1; i++){
             	j = i + 1;
             	$.get("https://cors-anywhere.herokuapp.com/http://www.lostart.de/Webs/EN/Datenbank/SucheDetail/SucheDetailErgebnis.html?cms_param=SUCHE_ID%3D" + sucheId + "%26page%3D" + j.toString() + "#result", function(data) {
