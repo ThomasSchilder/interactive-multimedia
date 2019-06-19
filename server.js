@@ -53,7 +53,7 @@ if(req.url == "/"){
 } else if(req.url.includes("/images/ThumbNails/")){
     res.writeHead(301, { "Location": "https://lootedart.com" + req.url});
     res.end();
-} else if(req.url.includes("/Webs/EN")){
+} else if(req.url.includes("/Webs/EN") || req.url.includes("/Content/")){
     res.writeHead(301, { "Location": "http://www.lostart.de" + req.url});
     res.end();
 } else {
