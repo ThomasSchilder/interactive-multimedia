@@ -83,3 +83,7 @@
     margin: 0 auto;
     max-width: 600px;
 }
+
+#resultsAmount {
+	width: 600px;
+}
