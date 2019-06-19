@@ -13,8 +13,8 @@ function searchAll(){
 
 function searchLootedArt(fName, lName, title, authority, nationality){
 	$.get("https://cors-anywhere.herokuapp.com/https://www.lootedart.com/search/searchdisplay.php\
-		?txtArtistLastName=" + fName + "\
-		&txtArtistFirstName=" + lName + "\
+		?txtArtistLastName=" + lName + "\
+		&txtArtistFirstName=" + fName + "\
 		&cboNat=ANY&txtObjectStatus=ANY\
 		&txtPeriodDesc=ANY\
 		&txtObjectTitle=" + title + "\
@@ -43,8 +43,8 @@ function searchLootedArt(fName, lName, title, authority, nationality){
         for(let i = 1; i < pages; i++){
             j = i + 1;
             $.get("https://cors-anywhere.herokuapp.com/https://www.lootedart.com/search/searchdisplay.php\
-			?txtArtistLastName=" + fName + "\
-			&txtArtistFirstName=" + lName + "\
+			?txtArtistLastName=" + lName + "\
+			&txtArtistFirstName=" + fName + "\
 			&cboNat=ANY&txtObjectStatus=ANY\
 			&txtPeriodDesc=ANY\
 			&txtObjectTitle=" + title + "\
