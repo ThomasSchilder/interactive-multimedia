@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+  <title>Home - Provenance Investigation</title>
+
+  <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="/js/search.js"></script>
+</head>
+<body>
+<div class="logoartbase">
+	<img class="logo" src="images/logoartbase.jpeg" alt="Artbase Logo">
+</div>
+<div class="form1">
+
+	<form id="search-form" name="search" action="??" method="GET">
+		<input id="title" type="text" placeholder="Title.." name="Title">
+		<input id="fName" type="text" placeholder="First name.." name="First Name">
+		<input id="lName" type="text" placeholder="Last name.." name="Last Name">
+		<input id="nationality" type="text" placeholder="Nationality.." name="Nationality">
+		<input id="authority" type="text" placeholder="Authority.." name="Authority">
+		<input id="genre" type="text" placeholder="Genre.." name="Genre">
+		<input id="type" type="text" placeholder="Type.." name="Type">
+		<button id="reset1"type="reset" value="Reset">Clear</button>	
+		<button id="submit1" type="button" onclick="searchAll()">ArtSearch</button>
+	</form>
+</div>
+<div id="results">
+</div>
+</body>

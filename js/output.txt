@@ -1,0 +1,22 @@
+null
+undefined
+{ rss: 
+   { '$': 
+      { 'xmlns:opensearch': 'http://a9.com/-/spec/opensearch/1.1/',
+        'xmlns:eac-cpf': 'urn:isbn:1-931666-33-4',
+        'xmlns:xlink': 'http://www.w3.org/1999/xlink',
+        'xmlns:xsi': 'http://www.w3.org/2001/XMLSchema-instance',
+        'xmlns:atom': 'http://www.w3.org/2005/Atom',
+        version: '2.0',
+        'xsi:schemaLocation': 'urn:isbn:1-931666-33-4 http://eac.staatsbibliothek-berlin.de/schema/cpf.xsd' },
+     channel: [ [Object] ] } }
+{ rss: 
+   { '$': 
+      { 'xmlns:opensearch': 'http://a9.com/-/spec/opensearch/1.1/',
+        'xmlns:eac-cpf': 'urn:isbn:1-931666-33-4',
+        'xmlns:xlink': 'http://www.w3.org/1999/xlink',
+        'xmlns:xsi': 'http://www.w3.org/2001/XMLSchema-instance',
+        'xmlns:atom': 'http://www.w3.org/2005/Atom',
+        version: '2.0',
+        'xsi:schemaLocation': 'urn:isbn:1-931666-33-4 http://eac.staatsbibliothek-berlin.de/schema/cpf.xsd' },
+     channel: [ [Object] ] } }
