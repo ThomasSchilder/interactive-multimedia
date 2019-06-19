@@ -8,6 +8,7 @@ function searchAll(){
   searchRkd(fName, lName);
   searchLootedArt(fName, lName, title, authority, nationality);
   searchLostart(fName, lName, title, authority);
+  searchHerkomstgezocht(fName, lName, title);
   document.getElementById("lijntje").style.display = "block";
 }
 
@@ -116,6 +117,17 @@ function searchLostart(fName, lName, title, authority){
 				}, (3000 * k));
             }
             }
+	});
+}
+
+function searchHerkomstgezocht(fName, lName, title){
+	$.get("https://cors-anywhere.herokuapp.com/http://herkomstgezocht.nl/nl/search/collection/\
+	" + title + " " + fName + " " + lName, function(data) {
+		htmlresults = new DOMParser().parseFromString(data, "text/html");
+		var results = htmlresults.getElementsByTagName('ol')[0].innerHTML;
+	    $('#results').append(results);
+	    var a = document.getElementsByTagName("a");
+        Array.from (a).forEach (((x) => { x.setAttribute("target", "_blank"); }) );
 	});
 }
 

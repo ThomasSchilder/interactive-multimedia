@@ -56,6 +56,9 @@ if(req.url == "/"){
 } else if(req.url.includes("/Webs/EN") || req.url.includes("/Content/")){
     res.writeHead(301, { "Location": "http://www.lostart.de" + req.url});
     res.end();
+} else if(req.url.includes("/sites/default/files/") || req.url.includes("/vw-collectie/")){
+    res.writeHead(301, { "Location": "http://herkomstgezocht.nl" + req.url});
+    res.end();
 } else {
     res.writeHead(404, {'Content-Type': 'text/html'});
     res.write("Not found");

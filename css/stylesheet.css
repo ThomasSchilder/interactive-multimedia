@@ -88,3 +88,9 @@
 	width: 600px;
 	font-weight: bold;
 }
+
+.search-result {
+	height: 250px;
+	background-size: cover;
+	width: 200px;
+}
