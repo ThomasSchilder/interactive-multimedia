@@ -40,7 +40,7 @@ function searchLootedArt(fName, lName, title, authority, nationality){
         var results = data.split("Your search returned ")[1].split(" results")[0];
         var pages = Math.ceil(results/10);
         document.getElementById("resultsAmount").innerHTML = document.getElementById("resultsAmount").innerHTML + "lootedart.com returned " + results.toString() + " results<br>";
-        
+        var j;
         for(let i = 1; i < pages; i++){
             j = i + 1;
             $.get("https://cors-anywhere.herokuapp.com/https://www.lootedart.com/search/searchdisplay.php\
@@ -132,6 +132,17 @@ function searchHerkomstgezocht(fName, lName, title){
         var results = data.split("Er zijn ")[1].split(" items")[0];
         document.getElementById("resultsAmount").innerHTML = document.getElementById("resultsAmount").innerHTML + "herkomstgezocht.nl returned " + results.toString() + " results<br>";
         var pages = Math.ceil(results/15);
+        var j;
+        for(let i = 0; i < pages-1; i++){
+            j = i + 1;
+            $.get("https://cors-anywhere.herokuapp.com/http://herkomstgezocht.nl/nl/search/collection/\
+			" + title + " " + fName + " " + lName + "?page=" + j.toString(), function(data) {
+				htmlresults = new DOMParser().parseFromString(data, "text/html");
+				var results = htmlresults.getElementsByTagName('ol')[0].innerHTML;
+				$('#results').append(results);
+			    var a = document.getElementsByTagName("a");
+			    Array.from (a).forEach (((x) => { x.setAttribute("target", "_blank"); }) );
+			});
 	});
 }
 
