@@ -90,6 +90,23 @@ function searchLostart(fName, lName, title, authority){
 	        $('#emptyTable').append(table);
 	        var a = document.getElementsByTagName("a");
             Array.from (a).forEach (((x) => { x.setAttribute("target", "_blank"); }) );
+            
+            var results = data.split("<caption>")[1].split(" Search results</caption>")[0];
+        	var pages = Math.ceil(results/10);
+        	var sucheId = data.split("http://www.lostart.de/Webs/EN/Datenbank/SucheDetail/SucheDetailErgebnis.html?cms_param=SUCHE_ID%3D")[1].split("%")[0];
+        	for(let i = 0; i < pages-1; i++){
+            	j = i + 1;
+            	$.get("http://www.lostart.de/Webs/EN/Datenbank/SucheDetail/SucheDetailErgebnis.html?cms_param=SUCHE_ID%3D" + sucheId + "%26page%3D" + j.toString() + "#result", function(data) {
+					htmlresults = new DOMParser().parseFromString(data, "text/html");
+					var tableEmpty = document.createElement("table");
+					tableEmpty.setAttribute("id", "emptyTable");
+					$('#results').append(tableEmpty);
+				    var table = htmlresults.getElementsByTagName('tbody')[0].innerHTML;
+			        $('#emptyTable').append(table);
+			        var a = document.getElementsByTagName("a");
+			        Array.from (a).forEach (((x) => { x.setAttribute("target", "_blank"); }) );
+				});
+            }
 	});
 }
 
