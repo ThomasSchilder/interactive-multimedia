@@ -101,8 +101,8 @@ function searchLostart(fName, lName, title, authority){
         	console.log(pages);
         	var sucheId = data.split("SUCHE_ID%3D")[1].split("%")[0];
         	for(let i = 0; i < pages-1; i++){
+        	var j = i + 1;
             setTimeout(function() {
-            	j = i + 1;
             	$.get("https://cors-anywhere.herokuapp.com/http://www.lostart.de/Webs/EN/Datenbank/SucheDetail/SucheDetailErgebnis.html?cms_param=SUCHE_ID%3D" + sucheId + "%26page%3D" + j.toString() + "#result", function(data) {
 					htmlresults = new DOMParser().parseFromString(data, "text/html");
 					var tableEmpty = document.createElement("table");
