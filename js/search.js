@@ -128,6 +128,10 @@ function searchHerkomstgezocht(fName, lName, title){
 	    $('#results').append(results);
 	    var a = document.getElementsByTagName("a");
         Array.from (a).forEach (((x) => { x.setAttribute("target", "_blank"); }) );
+        
+        var results = data.split("Er zijn ")[1].split(" items")[0];
+        document.getElementById("resultsAmount").innerHTML = document.getElementById("resultsAmount").innerHTML + "herkomstgezocht.nl returned " + results.toString() + " results<br>";
+        var pages = Math.ceil(results/15);
 	});
 }
 
