@@ -50,6 +50,9 @@ if(req.url == "/"){
 } else if(req.url.includes("/artwork.php?")){
     res.writeHead(301, { "Location": "https://lootedart.com/search" + req.url});
     res.end();
+} else if(req.url.includes("/images/ThumbNails/")){
+    res.writeHead(301, { "Location": "https://lootedart.com" + req.url});
+    res.end();
 } else {
     res.writeHead(404, {'Content-Type': 'text/html'});
     res.write("Not found");
