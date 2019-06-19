@@ -92,7 +92,8 @@ function searchLostart(fName, lName, title, authority){
 	        var a = document.getElementsByTagName("a");
             Array.from (a).forEach (((x) => { x.setAttribute("target", "_blank"); }) );
             
-            if(Number.isInteger(data.split("<caption>")[1].charAt(0))){
+            let arr = [0, 1, 2, 3, 4, 5, 6 ,7 ,8, 9];
+            if(arr.findIndex(x => x == data.split("<caption>")[1].charAt(0)) > -1){
             var results = data.split("<caption>")[1].split(" Search results")[0];
             document.getElementById("resultsAmount").innerHTML = document.getElementById("resultsAmount").innerHTML + "lostart.de returned " + results.toString() + " results<br>";
         	var pages = Math.ceil(parseInt(results)/10);
