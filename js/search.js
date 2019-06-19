@@ -91,11 +91,11 @@ function searchLostart(fName, lName, title, authority){
 	        var a = document.getElementsByTagName("a");
             Array.from (a).forEach (((x) => { x.setAttribute("target", "_blank"); }) );
             
-            var results = data.split("<caption>")[1].split(" Search results</caption>")[0];
-        	var pages = Math.ceil(results/10);
+            var results = data.split("<caption>")[1].split(" Search results")[0];
+        	var pages = Math.ceil(parseInt(results)/10);
         	console.log(pages);
-        	console.log(data.split("SUCHE_ID%3D"));
         	var sucheId = data.split("SUCHE_ID%3D")[1].split("%")[0];
+        	console.log(sucheId);
         	for(let i = 0; i < pages-1; i++){
             	j = i + 1;
             	$.get("http://www.lostart.de/Webs/EN/Datenbank/SucheDetail/SucheDetailErgebnis.html?cms_param=SUCHE_ID%3D" + sucheId + "%26page%3D" + j.toString() + "#result", function(data) {
