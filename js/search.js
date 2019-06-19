@@ -100,8 +100,9 @@ function searchLostart(fName, lName, title, authority){
         	var pages = Math.ceil(parseInt(results)/10);
         	console.log(pages);
         	var sucheId = data.split("SUCHE_ID%3D")[1].split("%")[0];
+        	var j;
         	for(let i = 0; i < pages-1; i++){
-        	var j = i + 1;
+        	j = i + 1;
             setTimeout(function() {
             	$.get("https://cors-anywhere.herokuapp.com/http://www.lostart.de/Webs/EN/Datenbank/SucheDetail/SucheDetailErgebnis.html?cms_param=SUCHE_ID%3D" + sucheId + "%26page%3D" + j.toString() + "#result", function(data) {
 					htmlresults = new DOMParser().parseFromString(data, "text/html");
@@ -113,7 +114,7 @@ function searchLostart(fName, lName, title, authority){
 			        var a = document.getElementsByTagName("a");
 			        Array.from (a).forEach (((x) => { x.setAttribute("target", "_blank"); }) );
 				});
-				}, (6000 * j));
+				}, (3000 * j));
             }
             }
 	});
