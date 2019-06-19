@@ -93,7 +93,7 @@ function searchLostart(fName, lName, title, authority){
             
             var results = data.split("<caption>")[1].split(" Search results</caption>")[0];
         	var pages = Math.ceil(results/10);
-        	var sucheId = data.split("http://www.lostart.de/Webs/EN/Datenbank/SucheDetail/SucheDetailErgebnis.html?cms_param=SUCHE_ID%3D")[1].split("%")[0];
+        	var sucheId = data.split("Webs/EN/Datenbank/SucheDetail/SucheDetailErgebnis.html?cms_param=SUCHE_ID%3D")[1].split("%")[0];
         	for(let i = 0; i < pages-1; i++){
             	j = i + 1;
             	$.get("http://www.lostart.de/Webs/EN/Datenbank/SucheDetail/SucheDetailErgebnis.html?cms_param=SUCHE_ID%3D" + sucheId + "%26page%3D" + j.toString() + "#result", function(data) {
