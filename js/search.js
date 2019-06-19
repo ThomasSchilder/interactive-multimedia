@@ -93,27 +93,26 @@ function searchLostart(fName, lName, title, authority){
             Array.from (a).forEach (((x) => { x.setAttribute("target", "_blank"); }) );
             
             let arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-            console.log(data.split("<caption>")[1].trim());
             if(arr.findIndex(x => x == data.split("<caption>")[1].trim()[0]) > -1){
             var results = data.split("<caption>")[1].split(" Search results")[0];
             document.getElementById("resultsAmount").innerHTML = document.getElementById("resultsAmount").innerHTML + "lostart.de returned " + results.toString() + " results<br>";
         	var pages = Math.ceil(parseInt(results)/10);
-        	console.log(pages);
         	var sucheId = data.split("SUCHE_ID%3D")[1].split("%")[0];
-        	var j;
+        	var j, k;
         	for(let i = 0; i < pages-1; i++){
-        	j = i + 1;
-            setTimeout(function() {
-            	$.get("https://cors-anywhere.herokuapp.com/http://www.lostart.de/Webs/EN/Datenbank/SucheDetail/SucheDetailErgebnis.html?cms_param=SUCHE_ID%3D" + sucheId + "%26page%3D" + j.toString() + "#result", function(data) {
-					htmlresults = new DOMParser().parseFromString(data, "text/html");
-					var tableEmpty = document.createElement("table");
-					tableEmpty.setAttribute("id", "emptyTable");
-					$('#results').append(tableEmpty);
-				    var table = htmlresults.getElementsByTagName('tbody')[0].innerHTML;
-			        $('#emptyTable').append(table);
-			        var a = document.getElementsByTagName("a");
-			        Array.from (a).forEach (((x) => { x.setAttribute("target", "_blank"); }) );
-				});
+        		k = i + 1;
+            	setTimeout(function() {
+            		j = i + 1;
+            		$.get("https://cors-anywhere.herokuapp.com/http://www.lostart.de/Webs/EN/Datenbank/SucheDetail/SucheDetailErgebnis.html?cms_param=SUCHE_ID%3D" + sucheId + "%26page%3D" + j.toString() + "#result", function(data) {
+						htmlresults = new DOMParser().parseFromString(data, "text/html");
+						var tableEmpty = document.createElement("table");
+						tableEmpty.setAttribute("id", "emptyTable");
+						$('#results').append(tableEmpty);
+					    var table = htmlresults.getElementsByTagName('tbody')[0].innerHTML;
+			    	    $('#emptyTable').append(table);
+			    	   var a = document.getElementsByTagName("a");
+			     	   Array.from (a).forEach (((x) => { x.setAttribute("target", "_blank"); }) );
+					});
 				}, (3000 * j));
             }
             }
