@@ -36,7 +36,35 @@ function searchLootedArt(fName, lName, title, authority, nationality){
         Array.from (a).forEach (((x) => { x.setAttribute("target", "_blank"); }) );
         var results = data.split("Your search returned ")[1].split(" results")[0];
         var pages = Math.ceil(results/10);
-        console.log(pages);
+        
+        for(let i = 1; i < pages; i++){
+            j = i + 1;
+            $.get("https://cors-anywhere.herokuapp.com/https://www.lootedart.com/search/searchdisplay.php\
+		    ?txtArtistLastName=" + fName + "\
+		    &txtArtistFirstName=" + lName + "\
+	    	&cboNat=ANY&txtObjectStatus=ANY\
+	    	&txtPeriodDesc=ANY\
+	    	&txtObjectTitle=" + title + "\
+	    	&txtObjectType=ANY\
+    		&cboPeriodStartYear=\
+	    	&cboPeriodStartEra=AD\
+	    	&cboPeriodEndYear=\
+	    	&cboPeriodEndEra=AD\
+	    	&txtOrientation=ANY\
+	    	&txtContactLastName=" + authority + "\
+	    	&txtContactFirstName=\
+	    	&txtLocationCity=\
+	    	&txtLocationCountry=" + nationality + "\
+	    	&txtStartYearComment=\
+	    	&txtEndYearComment=\
+	    	&submit1=Search&page=" + j.toString(), function(data) {
+		        htmlresults = new DOMParser().parseFromString(data, "text/html");
+		        var table = htmlresults.getElementsByTagName('table')[0].innerHTML;
+	        	$('#results').append(table);
+	        	var a = document.getElementsByTagName("a");
+                Array.from (a).forEach (((x) => { x.setAttribute("target", "_blank"); }) );
+	    	});
+        }
 	});
 }
 
