@@ -34,7 +34,9 @@ function searchLootedArt(fName, lName, title, authority, nationality){
 		$('#results').append(table);
 		var a = document.getElementsByTagName("a");
         Array.from (a).forEach (((x) => { x.setAttribute("target", "_blank"); }) );
-        console.log(data.split("Your search returned ")[1].split(" results")[0]);
+        var results = data.split("Your search returned ")[1].split(" results")[0];
+        var pages = Math.ceil(results/10);
+        console.log(pages);
 	});
 }
 
