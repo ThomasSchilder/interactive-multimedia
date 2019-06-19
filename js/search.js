@@ -1,4 +1,5 @@
 function searchAll(){
+  document.getElementById("results").innerHTML = "";
   var fName = document.getElementById("fName").value;
   var lName = document.getElementById("lName").value;
   var title = document.getElementById("title").value;
@@ -6,6 +7,7 @@ function searchAll(){
   var nationality = document.getElementById("nationality").value;
   searchRkd(fName, lName);
   searchLootedArt(fName, lName, title, authority, nationality);
+  searchLostart(fName, lName, title, authority);
   document.getElementById("lijntje").style.display = "block";
 }
 
@@ -65,6 +67,26 @@ function searchLootedArt(fName, lName, title, authority, nationality){
                 Array.from (a).forEach (((x) => { x.setAttribute("target", "_blank"); }) );
 	    	});
         }
+	});
+}
+
+function searchLostart(fName, lName, title, authority){
+	$.get("https://cors-anywhere.herokuapp.com/http://www.lostart.de/Webs/EN/Datenbank/SucheDetail/SucheMeldungDetail.html?resourceId=7398&input_=7332&pageLocale=en\
+	&titelbesch=" + title + "\
+	&person=" + fName + " " + lName + "\
+	&objektart=-1\
+	&objektart.GROUP=1\
+	&mattech=\
+	&datierung=\
+	&provenienz=\
+	&instsamml=" + authority + "\
+	&kennz=\
+	&id=+477958&pubop=eq&pubop.GROUP=1&pubyear=&pubyear.GROUP=1&type.GROUP=1&suche_typ=MeldungDetail&suche_typ.HASH=1f7be21bf284266ab474&suchen=Search", function(data) {
+			htmlresults = new DOMParser().parseFromString(data, "text/html");
+		    var table = htmlresults.getElementsByTagName('table')[0].innerHTML;
+	        $('#results').append(table);
+	        var a = document.getElementsByTagName("a");
+            Array.from (a).forEach (((x) => { x.setAttribute("target", "_blank"); }) );
 	});
 }
 
