@@ -122,7 +122,6 @@ h2 {
 }
 #tab:focus{
 	outline: 0;
-	background-color: white;
-	color:#109177;
-	border: none;
+	background-color: #12cca6;
+	color:white;
 }
