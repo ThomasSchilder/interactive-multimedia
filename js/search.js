@@ -7,11 +7,15 @@ function searchAll(){
   var nationality = document.getElementById("nationality").value;
   searchLostart();
   switchToResults();
-  document.getElementById('tab1').focus();
   document.getElementById("lijntje").style.display = "block";
 }
 
 function searchLootedArt(){
+  document.getElementsbyClassName('instruction')[0].style.display = 'none';
+  document.getElementsbyClassName('lostart')[0].style.display = 'none';
+  document.getElementsbyClassName('lootart')[0].style.display = 'block';
+  document.getElementsbyClassName('herkomstgezocht')[0].style.display = 'none';
+  document.getElementsbyClassName('rkd')[0].style.display = 'none';
   document.getElementById("results").innerHTML = '<table><caption id="resultsAmount"></caption></table><br>';
   var fName = document.getElementById("fName").value;
   var lName = document.getElementById("lName").value;
@@ -78,6 +82,11 @@ function searchLootedArt(){
 }
 
 function searchLostart(){
+  document.getElementsbyClassName('instruction')[0].style.display = 'none';
+  document.getElementsbyClassName('lostart')[0].style.display = 'block';
+  document.getElementsbyClassName('lootart')[0].style.display = 'none';
+  document.getElementsbyClassName('herkomstgezocht')[0].style.display = 'none';
+  document.getElementsbyClassName('rkd')[0].style.display = 'none';
   document.getElementById("results").innerHTML = '<table><caption id="resultsAmount"></caption></table><br>';
   var fName = document.getElementById("fName").value;
   var lName = document.getElementById("lName").value;
@@ -131,6 +140,11 @@ function searchLostart(){
 }
 
 function searchHerkomstgezocht(fName, lName, title){
+  document.getElementsbyClassName('instruction')[0].style.display = 'none';
+  document.getElementsbyClassName('lostart')[0].style.display = 'none';
+  document.getElementsbyClassName('lootart')[0].style.display = 'none';
+  document.getElementsbyClassName('herkomstgezocht')[0].style.display = 'block';
+  document.getElementsbyClassName('rkd')[0].style.display = 'none';
   document.getElementById("results").innerHTML = '<table><caption id="resultsAmount"></caption></table><br>';
   var fName = document.getElementById("fName").value;
   var lName = document.getElementById("lName").value;
@@ -162,6 +176,11 @@ function searchHerkomstgezocht(fName, lName, title){
 }
 
 function searchRkd(fName, lName){
+  document.getElementsbyClassName('instruction')[0].style.display = 'none';
+  document.getElementsbyClassName('lostart')[0].style.display = 'none';
+  document.getElementsbyClassName('lootart')[0].style.display = 'none';
+  document.getElementsbyClassName('herkomstgezocht')[0].style.display = 'none';
+  document.getElementsbyClassName('rkd')[0].style.display = 'block';
   document.getElementById("results").innerHTML = '<table><caption id="resultsAmount"></caption></table><br>';
   var fName = document.getElementById("fName").value;
   var lName = document.getElementById("lName").value;
