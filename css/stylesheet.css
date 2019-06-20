@@ -154,4 +154,17 @@ h2 {
 	color: white;
 
 }
+.instruction{
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	align-items: center;
+	text-align: center;
+	background-color:green;
+}
 
+.box{
+	background-color: blue;
+	border: 1px solid blue;
+	border-width: 1px 1px 3px;
+}
