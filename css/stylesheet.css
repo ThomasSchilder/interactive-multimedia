@@ -161,13 +161,13 @@ h2 {
 	align-items: center;
 	text-align: center;
 	color: white;
-	background-color:#1abc9c;
+	background-color:white;
 }
 
 .box{
 	width: 40%;
 	margin: 0 auto;
-	background-color: blue;
-	border: 1px solid blue;
+	background-color: #1abc9c;
+	border: 1px solid #16a085;
 	border-width: 1px 1px 3px;
 }
