@@ -110,11 +110,11 @@ h2 {
 }
 #tab{
 	color: white;
-	width: 24%;
+	width: 25%;
 	height: 35px;
 	background-color: #109177;
 	border: 1px solid #16a085;
 	border-width: 1px 1px 3px;
 	font-size: 18px;
-	text_align: center;
+	text-align: center;
 }
