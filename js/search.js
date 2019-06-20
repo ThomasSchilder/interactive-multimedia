@@ -5,8 +5,8 @@ function searchAll(){
   var title = document.getElementById("title").value;
   var authority = document.getElementById("authority").value;
   var nationality = document.getElementById("nationality").value;
-  searchLostart();
   switchToResults();
+  document.getElementsByClassName('instruction')[0].style.display = 'block';
   document.getElementById("lijntje").style.display = "block";
 }
 
