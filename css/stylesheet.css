@@ -145,5 +145,7 @@ h2 {
 #newquery{
 	outline: 0;
 	background-color: #1abc9c;
+	height: 35px;
+	margin-bottom: 5px;
 
 }
