@@ -114,16 +114,39 @@ h2 {
 	color: white;
 	width: 24%;
 	height: 36px;
-	background-color: #109177;
+	background-color: #1abc9c;
 	border: 1px solid #16a085;
 	border-width: 1px 1px 3px;
 	font-size: 18px;
 	text-align: center;
 
 }
+	#tab1{
+	color: white;
+	width: 24%;
+	height: 36px;
+	background-color: #1abc9c;
+	border: 1px solid #16a085;
+	border-width: 1px 1px 3px;
+	font-size: 18px;
+	text-align: center;
+}
+
 #tab:focus{
 	outline: 0;
-	background-color: #12cca6;
-	color:white;
+	background-color: #109177;
+	color: white;
+}
+ #tab1:focus{
+	outline: 0;
+	background-color: #109177;
+	color: white;
+}
+#newquery{
+	outline: 0;
+	background-color: #1abc9c;
+	height: 35px;
+	margin-bottom: 5px;
+
 }
 
