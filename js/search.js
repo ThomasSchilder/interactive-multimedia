@@ -13,7 +13,13 @@ function searchAll(){
   document.getElementById("lijntje").style.display = "block";
 }
 
-function searchLootedArt(fName, lName, title, authority, nationality){
+function searchLootedArt(){
+  document.getElementById("results").innerHTML = '<table><caption id="resultsAmount"></caption></table><br>';
+  var fName = document.getElementById("fName").value;
+  var lName = document.getElementById("lName").value;
+  var title = document.getElementById("title").value;
+  var authority = document.getElementById("authority").value;
+  var nationality = document.getElementById("nationality").value;
 	$.get("https://cors-anywhere.herokuapp.com/https://www.lootedart.com/search/searchdisplay.php\
 		?txtArtistLastName=" + lName + "\
 		&txtArtistFirstName=" + fName + "\
@@ -73,7 +79,12 @@ function searchLootedArt(fName, lName, title, authority, nationality){
 	});
 }
 
-function searchLostart(fName, lName, title, authority){
+function searchLostart(){
+  document.getElementById("results").innerHTML = '<table><caption id="resultsAmount"></caption></table><br>';
+  var fName = document.getElementById("fName").value;
+  var lName = document.getElementById("lName").value;
+  var title = document.getElementById("title").value;
+  var authority = document.getElementById("authority").value;
 	$.get("https://cors-anywhere.herokuapp.com/http://www.lostart.de/Webs/EN/Datenbank/SucheDetail/SucheMeldungDetail.html?resourceId=7398&input_=7332&pageLocale=en\
 	&titelbesch=" + title + "\
 	&person=" + fName + " " + lName + "\
@@ -122,6 +133,10 @@ function searchLostart(fName, lName, title, authority){
 }
 
 function searchHerkomstgezocht(fName, lName, title){
+  document.getElementById("results").innerHTML = '<table><caption id="resultsAmount"></caption></table><br>';
+  var fName = document.getElementById("fName").value;
+  var lName = document.getElementById("lName").value;
+  var title = document.getElementById("title").value;
 	$.get("https://cors-anywhere.herokuapp.com/http://herkomstgezocht.nl/nl/search/collection/\
 	" + title + " " + fName + " " + lName, function(data) {
 		htmlresults = new DOMParser().parseFromString(data, "text/html");
@@ -149,6 +164,9 @@ function searchHerkomstgezocht(fName, lName, title){
 }
 
 function searchRkd(fName, lName){
+  document.getElementById("results").innerHTML = '<table><caption id="resultsAmount"></caption></table><br>';
+  var fName = document.getElementById("fName").value;
+  var lName = document.getElementById("lName").value;
     $.get("/rkdcall?fName=" + fName + "&lName=" + lName, function(data) {
         console.log(data);
     });
