@@ -1,9 +1,9 @@
 function switchToResults(){
-  document.getElementByClassName("search").style.display = "none";
-  document.getElementByClassName("results").style.display = "block";
+  document.getElementsByClassName("search").style.display = "none";
+  document.getElementsByClassName("results").style.display = "block";
 }
 
 function switchToSearch(){
-  document.getElementByClassName('serach').style.display = "block";
-  document.getElementByClassName('results').style.display = "none";
+  document.getElementsByClassName('search').style.display = "block";
+  document.getElementsByClassName('results').style.display = "none";
 }
