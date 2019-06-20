@@ -5,11 +5,9 @@ function searchAll(){
   var title = document.getElementById("title").value;
   var authority = document.getElementById("authority").value;
   var nationality = document.getElementById("nationality").value;
-  searchRkd(fName, lName);
-  searchLootedArt(fName, lName, title, authority, nationality);
-  searchLostart(fName, lName, title, authority);
-  searchHerkomstgezocht(fName, lName, title);
+  searchLostart();
   switchToResults();
+  document.getElementById('tab1').focus();
   document.getElementById("lijntje").style.display = "block";
 }
 
