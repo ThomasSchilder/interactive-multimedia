@@ -106,3 +106,9 @@ h2 {
 	height:25px;
 	align-items: center;
 }
+#tab{
+	color: white;
+	background-color: #109177;
+	border: 1px solid #16a085;
+	border-width: 1px 1px 3px;
+}
