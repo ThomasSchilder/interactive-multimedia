@@ -143,9 +143,14 @@ h2 {
 	color: white;
 }
 #newquery{
+	font-size: 18px;
+	background-color: #1abc9c;
+	border: 1px solid #16a085;
+	border-width: 1px 1px 3px;
 	outline: 0;
 	background-color: #1abc9c;
 	height: 35px;
 	margin-bottom: 5px;
+	color: white;
 
 }
