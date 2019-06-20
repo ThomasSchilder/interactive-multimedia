@@ -9,6 +9,7 @@ function searchAll(){
   searchLootedArt(fName, lName, title, authority, nationality);
   searchLostart(fName, lName, title, authority);
   searchHerkomstgezocht(fName, lName, title);
+  switchToResults();
   document.getElementById("lijntje").style.display = "block";
 }
 
