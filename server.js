@@ -35,9 +35,9 @@ if(req.url == "/"){
     res.write(data);
     res.end();
   });
-} else if(req.url == "/images/logoartbase.jpeg"){
-   fs.readFile('images/logoartbase.jpeg', function(err, data) {
-    res.writeHead(200, {'Content-Type': 'image/jpeg'});
+} else if(req.url == "/images/logoartbase.png"){
+   fs.readFile('images/logoartbase.png', function(err, data) {
+    res.writeHead(200, {'Content-Type': 'image/png'});
     res.write(data);
     res.end();
   });
