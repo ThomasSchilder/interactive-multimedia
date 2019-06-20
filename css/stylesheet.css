@@ -119,9 +119,14 @@ h2 {
 	border-width: 1px 1px 3px;
 	font-size: 18px;
 	text-align: center;
-
 }
-#tab:focus, #tab1:focus{
+
+#tab:focus{
+	outline: 0;
+	background-color: #109177;
+	color: white;
+}
+ #tab1:focus{
 	outline: 0;
 	background-color: #109177;
 	color: white;
