@@ -117,4 +117,8 @@ h2 {
 	border-width: 1px 1px 3px;
 	font-size: 18px;
 	text-align: center;
+
+}
+#tab:focus{
+	outline: 0;
 }
