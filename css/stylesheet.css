@@ -110,7 +110,7 @@ h2 {
 	text-align: center;
 	background-color:#109177
 }
-#tab,#tab1{
+#tab, #tab1{
 	color: white;
 	width: 24%;
 	height: 36px;
@@ -121,8 +121,8 @@ h2 {
 	text-align: center;
 
 }
-#tab:focus,#tab1:focus{
+#tab:focus, #tab1:focus{
 	outline: 0;
 	background-color: #109177;
-	color:white;
+	color: white;
 }
