@@ -177,3 +177,7 @@ h3{
 p{
 	font-size:18px;
 }
+
+h1{
+	border-left: 4px;
+}
