@@ -81,8 +81,12 @@
 }
 
 #results {
-    margin: 0 auto;
     max-width: 600px;
+    padding: 10px;
+    margin: 1% auto;
+    background: #f4f7f8;
+    border-radius: 8px;
+    font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 #resultsAmount {
@@ -101,15 +105,21 @@ h2 {
 }
 .results{
 	display: none;
+	margin-top: 4%;
+	margin-left: 10%;
+	margin-right: 10%;
 }
+
 .navigation{
-	margin-top:0;
-	width: 100%;
-	height:35px;
+	top: 0px;
+	position: fixed;
+	width: 82%;
+	height: 35px;
+	padding: 10px;
 	align-items: center;
 	text-align: center;
-	background-color:#109177
 }
+
 #tab{
 	color: white;
 	width: 24%;
@@ -119,8 +129,8 @@ h2 {
 	border-width: 1px 1px 3px;
 	font-size: 18px;
 	text-align: center;
-
 }
+
 	#tab1{
 	color: white;
 	width: 24%;
@@ -143,6 +153,8 @@ h2 {
 	color: white;
 }
 #newquery{
+	float: right;
+    margin-right: 10%;
 	font-size: 18px;
 	background-color: #1abc9c;
 	border: 1px solid #16a085;
@@ -150,7 +162,7 @@ h2 {
 	outline: 0;
 	background-color: #1abc9c;
 	height: 35px;
-	margin-bottom: 5px;
+	margin-bottom: 5%
 	color: white;
 
 }
@@ -170,6 +182,10 @@ h2 {
 	background-color: #1abc9c;
 	border: 1px solid #16a085;
 	border-width: 3px 3px 3px;
+}
+
+#emptyTable{
+
 }
 h3{
 	font-size: 32px;
