@@ -171,8 +171,12 @@ h2 {
     outline: 0;
     background-color: #1abc9c;
     height: 35px;
-
 }
+
+#newquery:hover {
+	background-color: #105c4d;
+}
+
 .instruction{
 	width: 100%;
 	height: auto;
