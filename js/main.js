@@ -5,7 +5,8 @@ function switchToResults(){
 
 function switchToSearch(){
   document.getElementsByClassName('search')[0].style.display = "block";
-  document.getElementById('results')[0].style.display = "none";
+  document.getElementsByClassName('results')[0].style.display = "none";
+  document.getElementById('results').style.display = "none";
   document.getElementById("results").innerHTML = '<table><caption id="resultsAmount"></caption></table><br>';
   document.getElementsByClassName("lostart")[0].innerHTML = "";
   document.getElementsByClassName("lostart")[0].setAttribute("alreadySearched", "false");
