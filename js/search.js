@@ -82,8 +82,8 @@ function searchLootedArt(){
 }
 
 function searchLostart(){
-  let table = document.getElementsByTagName('tbody')[0];
-  if (table.rows != undefined){
+  let length = document.getElementById('results').length;
+  if (length > 0){
     return;
   }
   else{
