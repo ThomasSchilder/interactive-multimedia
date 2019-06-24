@@ -162,6 +162,10 @@ h2 {
 	background-color: #105c4d;
 }
 
+#notes {
+	display: none;
+}
+
 #notesH {
 	width: 1px;
 	margin: 0 auto;
