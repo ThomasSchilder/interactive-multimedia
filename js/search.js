@@ -11,14 +11,13 @@ function searchAll(){
 }
 
 function searchLootedArt(){
-  if(document.getElementsByClassName('lootart')[0].getAttribute("alreadySearched") == "false"){
-  document.getElementsByClassName('lootart')[0].setAttribute("alreadySearched", "true");
   document.getElementsByClassName('instruction')[0].style.display = 'none';
   document.getElementsByClassName('lostart')[0].style.display = 'none';
   document.getElementsByClassName('lootart')[0].style.display = 'block';
   document.getElementsByClassName('herkomstgezocht')[0].style.display = 'none';
   document.getElementsByClassName('rkd')[0].style.display = 'none';
-  document.getElementById("results").innerHTML = '<table><caption id="resultsAmount"></caption></table><br>';
+  if(document.getElementsByClassName('lootart')[0].getAttribute("alreadySearched") == "false"){
+  document.getElementsByClassName('lootart')[0].setAttribute("alreadySearched", "true");
   var fName = document.getElementById("fName").value;
   var lName = document.getElementById("lName").value;
   var title = document.getElementById("title").value;
