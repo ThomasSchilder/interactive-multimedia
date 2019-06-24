@@ -88,15 +88,6 @@
     border-radius: 8px;
     font-family: Georgia, "Times New Roman", Times, serif;
 }
-#lostresults, #lootedresults, #herkomstresults, #rkdresults{
-	max-width: 600px;
-	padding: 10px;
-	margin: 1% auto;
-	background: #f4f7f8;
-	border-radius: 8px;
-	font-family: Georgia, "Times New Roman", Times, serif;
-	display: none;
-}
 
 #resultsAmount {
 	width: 600px;

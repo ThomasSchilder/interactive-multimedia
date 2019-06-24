@@ -11,15 +11,11 @@ function searchAll(){
 }
 
 function searchLootedArt(){
+  document.getElementsByClassName('instruction')[0].style.display = 'none';
   document.getElementsByClassName('lostart')[0].style.display = 'none';
-  document.getElementsByClassName('lootedart')[0].style.display = 'none';
+  document.getElementsByClassName('lootart')[0].style.display = 'block';
   document.getElementsByClassName('herkomstgezocht')[0].style.display = 'none';
   document.getElementsByClassName('rkd')[0].style.display = 'none';
-  document.getElementsByClassName('instruction')[0].style.display = 'none';
-  document.getElementById('lostresults')[0].style.display = 'none';
-  document.getElementById('lootresults')[0].style.display = 'block';
-  document.getElementById('herkomstresults')[0].style.display = 'none';
-  document.getElementById('rkdresults')[0].style.display = 'none';
   document.getElementById("results").innerHTML = '<table><caption id="resultsAmount"></caption></table><br>';
   var fName = document.getElementById("fName").value;
   var lName = document.getElementById("lName").value;
@@ -47,7 +43,7 @@ function searchLootedArt(){
 		&submit1=Search", function(data) {
 		htmlresults = new DOMParser().parseFromString(data, "text/html");
 		var table = htmlresults.getElementsByTagName('table')[0].innerHTML;
-		$('#lootedresults').append(table);
+		$('#results').append(table);
 		var a = document.getElementsByTagName("a");
         Array.from (a).forEach (((x) => { x.setAttribute("target", "_blank"); }) );
         var results = data.split("Your search returned ")[1].split(" results")[0];
@@ -77,7 +73,7 @@ function searchLootedArt(){
 			&submit1=Search&page=" + j.toString(), function(data) {
 		        htmlresults = new DOMParser().parseFromString(data, "text/html");
 		        var table = htmlresults.getElementsByTagName('table')[0].innerHTML;
-	        	$('#lootedresults').append(table);
+	        	$('#results').append(table);
 	        	var a = document.getElementsByTagName("a");
                 Array.from (a).forEach (((x) => { x.setAttribute("target", "_blank"); }) );
 	    	});
@@ -86,15 +82,11 @@ function searchLootedArt(){
 }
 
 function searchLostart(){
+  document.getElementsByClassName('instruction')[0].style.display = 'none';
   document.getElementsByClassName('lostart')[0].style.display = 'block';
-  document.getElementsByClassName('lootedart')[0].style.display = 'none';
+  document.getElementsByClassName('lootart')[0].style.display = 'none';
   document.getElementsByClassName('herkomstgezocht')[0].style.display = 'none';
   document.getElementsByClassName('rkd')[0].style.display = 'none';
-  document.getElementsByClassName('instruction')[0].style.display = 'none';
-  document.getElementById('lostresults')[0].style.display = 'block';
-  document.getElementById('lootresults')[0].style.display = 'none';
-  document.getElementById('herkomstresults')[0].style.display = 'none';
-  document.getElementById('rkdresults')[0].style.display = 'none';
   document.getElementById("results").innerHTML = '<table><caption id="resultsAmount"></caption></table><br>';
   var fName = document.getElementById("fName").value;
   var lName = document.getElementById("lName").value;
@@ -114,7 +106,7 @@ function searchLostart(){
 			htmlresults = new DOMParser().parseFromString(data, "text/html");
 			var tableEmpty = document.createElement("table");
 			tableEmpty.setAttribute("id", "emptyTable");
-			$('#lostresults').append(tableEmpty);
+			$('#results').append(tableEmpty);
 		    var table = htmlresults.getElementsByTagName('tbody')[0].innerHTML;
 	        $('#emptyTable').append(table);
 	        var a = document.getElementsByTagName("a");
@@ -135,7 +127,7 @@ function searchLostart(){
 						htmlresults = new DOMParser().parseFromString(data, "text/html");
 						var tableEmpty = document.createElement("table");
 						tableEmpty.setAttribute("id", "emptyTable");
-						$('#lostresults').append(tableEmpty);
+						$('#results').append(tableEmpty);
 					    var table = htmlresults.getElementsByTagName('tbody')[0].innerHTML;
 			    	    $('#emptyTable').append(table);
 			    	   var a = document.getElementsByTagName("a");
@@ -148,15 +140,11 @@ function searchLostart(){
 }
 
 function searchHerkomstgezocht(fName, lName, title){
+  document.getElementsByClassName('instruction')[0].style.display = 'none';
   document.getElementsByClassName('lostart')[0].style.display = 'none';
-  document.getElementsByClassName('lootedart')[0].style.display = 'none';
+  document.getElementsByClassName('lootart')[0].style.display = 'none';
   document.getElementsByClassName('herkomstgezocht')[0].style.display = 'block';
   document.getElementsByClassName('rkd')[0].style.display = 'none';
-  document.getElementsByClassName('instruction')[0].style.display = 'none';
-  document.getElementById('lostresults')[0].style.display = 'none';
-  document.getElementById('lootresults')[0].style.display = 'none';
-  document.getElementById('herkomstresults')[0].style.display = 'block';
-  document.getElementById('rkdresults')[0].style.display = 'none';
   document.getElementById("results").innerHTML = '<table><caption id="resultsAmount"></caption></table><br>';
   var fName = document.getElementById("fName").value;
   var lName = document.getElementById("lName").value;
@@ -165,7 +153,7 @@ function searchHerkomstgezocht(fName, lName, title){
 	" + title + " " + fName + " " + lName, function(data) {
 		htmlresults = new DOMParser().parseFromString(data, "text/html");
 		var results = htmlresults.getElementsByTagName('ol')[0].innerHTML;
-	    $('#herkomstresults').append(results);
+	    $('#results').append(results);
 	    var a = document.getElementsByTagName("a");
         Array.from (a).forEach (((x) => { x.setAttribute("target", "_blank"); }) );
 
@@ -179,7 +167,7 @@ function searchHerkomstgezocht(fName, lName, title){
 			" + title + " " + fName + " " + lName + "?page=" + j.toString(), function(data) {
 				htmlresults = new DOMParser().parseFromString(data, "text/html");
 				var results = htmlresults.getElementsByTagName('ol')[0].innerHTML;
-				$('#herkomstresults').append(results);
+				$('#results').append(results);
 			    var a = document.getElementsByTagName("a");
 			    Array.from (a).forEach (((x) => { x.setAttribute("target", "_blank"); }) );
 			});
@@ -188,15 +176,11 @@ function searchHerkomstgezocht(fName, lName, title){
 }
 
 function searchRkd(fName, lName){
+  document.getElementsByClassName('instruction')[0].style.display = 'none';
   document.getElementsByClassName('lostart')[0].style.display = 'none';
-  document.getElementsByClassName('lootedart')[0].style.display = 'none';
+  document.getElementsByClassName('lootart')[0].style.display = 'none';
   document.getElementsByClassName('herkomstgezocht')[0].style.display = 'none';
   document.getElementsByClassName('rkd')[0].style.display = 'block';
-  document.getElementsByClassName('instruction')[0].style.display = 'none';
-  document.getElementById('lostresults')[0].style.display = 'none';
-  document.getElementById('lootresults')[0].style.display = 'none';
-  document.getElementById('herkomstresults')[0].style.display = 'none';
-  document.getElementById('rkdresults')[0].style.display = 'block';
   document.getElementById("results").innerHTML = '<table><caption id="resultsAmount"></caption></table><br>';
   var fName = document.getElementById("fName").value;
   var lName = document.getElementById("lName").value;
