@@ -127,7 +127,7 @@ h2 {
     background: #ffffff;
     }
 
-#tab{
+.tab{
 	color: white;
 	width: 24%;
 	height: 36px;
@@ -138,7 +138,7 @@ h2 {
 	text-align: center;
 }
 
-	#tab1{
+	.tab1{
 	color: white;
 	width: 24%;
 	height: 36px;
@@ -149,16 +149,21 @@ h2 {
 	text-align: center;
 }
 
-#tab:focus{
+.tab:focus{
 	outline: 0;
 	background-color: #109177;
 	color: white;
 }
- #tab1:focus{
+ .tab1:focus{
 	outline: 0;
 	background-color: #109177;
 	color: white;
 }
+
+.tab:hover, .tab1:hover {
+	background-color: #105c4d;
+}
+
 #newquery{
     font-size: 18px;
     border: 1px solid #16a085;
