@@ -187,9 +187,12 @@ function searchRkd(fName, lName){
   document.getElementsByClassName('lootart')[0].style.display = 'none';
   document.getElementsByClassName('herkomstgezocht')[0].style.display = 'none';
   document.getElementsByClassName('rkd')[0].style.display = 'block';
+  if(document.getElementsByClassName('rkd')[0].getAttribute("alreadySearched") == "false"){
+  document.getElementsByClassName('rkd')[0].setAttribute("alreadySearched", "true");
   var fName = document.getElementById("fName").value;
   var lName = document.getElementById("lName").value;
     $.get("/rkdcall?fName=" + fName + "&lName=" + lName, function(data) {
         console.log(data);
     });
+    }
 }
