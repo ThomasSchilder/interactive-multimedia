@@ -7,6 +7,7 @@
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="/js/search.js"></script>
   <script src="/js/main.js"></script>
+  <script src="https://cdn.ckeditor.com/ckeditor5/12.2.0/inline/ckeditor.js"></script>
 </head>
 <body>
   <div class="search">
@@ -36,6 +37,7 @@
       <button class="tab" type="button" onclick="searchLootedArt()" name="button">Lootedart.com <i class="fa fa-caret-down" aria-hidden="true"></i></button>
       <button class="tab" type="button" onclick="searchHerkomstgezocht()" name="button">herkomstgezocht.nl <i class="fa fa-caret-down" aria-hidden="true"></i></button>
       <button class="tab" type="button" onclick="searchRkd()" name="button">RKD.nl <i class="fa fa-caret-down" aria-hidden="true"></i></button>
+      <button class="tab" type="button" onclick="openNotes()" name="button">Notes <i class="fa fa-caret-down" aria-hidden="true"></i></button>
     </nav>
     <hr id="lijntje" style="display: none;">
     <button type="button" id="newquery" name="button" onclick="switchToSearch()"><i class="far fa-arrow-alt-circle-left"></i> New search</button>
@@ -56,5 +58,17 @@
   </div>
   <div class="rkd" alreadySearched="false">
   </div>
-  
+  <div id="notes">
+  	<h1>Notes</h1>
+  	<div id="editor">
+        <p>You can enter your own notes here.</p>
+    </div>
+    <script>
+        InlineEditor
+            .create( document.querySelector( '#editor' ) )
+            .catch( error => {
+                console.error( error );
+            } );
+    </script>
+  </div>
 </body>

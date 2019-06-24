@@ -178,6 +178,10 @@ h2 {
 	background-color: #105c4d;
 }
 
+#notes {
+	text-align: center;
+}
+
 .instruction{
 	width: 100%;
 	height: auto;
