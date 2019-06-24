@@ -11,7 +11,7 @@ function searchAll(){
 }
 
 function searchLootedArt(){
-  if(document.getElementsByClassName('lootart')[0].innerHTML == ""){
+  if(document.getElementsByClassName('lootart')[0].innerHTML === undefined){
   document.getElementsByClassName('instruction')[0].style.display = 'none';
   document.getElementsByClassName('lostart')[0].style.display = 'none';
   document.getElementsByClassName('lootart')[0].style.display = 'block';
