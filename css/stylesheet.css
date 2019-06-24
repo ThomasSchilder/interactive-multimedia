@@ -129,18 +129,7 @@ h2 {
 
 .tab{
 	color: white;
-	width: 24%;
-	height: 36px;
-	background-color: #1abc9c;
-	border: 1px solid #16a085;
-	border-width: 1px 1px 3px;
-	font-size: 18px;
-	text-align: center;
-}
-
-	.tab1{
-	color: white;
-	width: 24%;
+	width: 19%;
 	height: 36px;
 	background-color: #1abc9c;
 	border: 1px solid #16a085;
@@ -154,13 +143,8 @@ h2 {
 	background-color: #109177;
 	color: white;
 }
- .tab1:focus{
-	outline: 0;
-	background-color: #109177;
-	color: white;
-}
 
-.tab:hover, .tab1:hover {
+.tab:hover {
 	background-color: #105c4d;
 }
 
@@ -178,8 +162,16 @@ h2 {
 	background-color: #105c4d;
 }
 
-#notes {
-	text-align: center;
+#notesH {
+	width: 1px;
+	margin: 0 auto;
+}
+
+#editor {
+	border: 1px solid #16a085;
+	height: 1000px;
+	width: 900px;
+	margin: 0 auto;
 }
 
 .instruction{

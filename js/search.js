@@ -16,6 +16,7 @@ function searchLootedArt(){
   document.getElementsByClassName('lootart')[0].style.display = 'block';
   document.getElementsByClassName('herkomstgezocht')[0].style.display = 'none';
   document.getElementsByClassName('rkd')[0].style.display = 'none';
+  document.getElementById("notes").style.display = "none";
   if(document.getElementsByClassName('lootart')[0].getAttribute("alreadySearched") == "false"){
   document.getElementsByClassName('lootart')[0].setAttribute("alreadySearched", "true");
   var fName = document.getElementById("fName").value;
@@ -89,6 +90,7 @@ function searchLostart(){
     document.getElementsByClassName('lootart')[0].style.display = 'none';
     document.getElementsByClassName('herkomstgezocht')[0].style.display = 'none';
     document.getElementsByClassName('rkd')[0].style.display = 'none';
+    document.getElementById("notes").style.display = "none";
     if(document.getElementsByClassName('lostart')[0].getAttribute("alreadySearched") == "false"){
   document.getElementsByClassName('lostart')[0].setAttribute("alreadySearched", "true");
     var fName = document.getElementById("fName").value;
@@ -149,6 +151,7 @@ function searchHerkomstgezocht(fName, lName, title){
   document.getElementsByClassName('lootart')[0].style.display = 'none';
   document.getElementsByClassName('herkomstgezocht')[0].style.display = 'block';
   document.getElementsByClassName('rkd')[0].style.display = 'none';
+  document.getElementById("notes").style.display = "none";
   if(document.getElementsByClassName('herkomstgezocht')[0].getAttribute("alreadySearched") == "false"){
   document.getElementsByClassName('herkomstgezocht')[0].setAttribute("alreadySearched", "true");
   var fName = document.getElementById("fName").value;
@@ -187,6 +190,7 @@ function searchRkd(fName, lName){
   document.getElementsByClassName('lootart')[0].style.display = 'none';
   document.getElementsByClassName('herkomstgezocht')[0].style.display = 'none';
   document.getElementsByClassName('rkd')[0].style.display = 'block';
+  document.getElementById("notes").style.display = "none";
   if(document.getElementsByClassName('rkd')[0].getAttribute("alreadySearched") == "false"){
   document.getElementsByClassName('rkd')[0].setAttribute("alreadySearched", "true");
   var fName = document.getElementById("fName").value;
