@@ -117,15 +117,14 @@ h2 {
 }
 
 .navigation{
-	top: 0px;
-	position: fixed;
-	width: 82%;
-	height: 35px;
-	padding: 10px;
-	align-items: center;
-	text-align: center;
-	background-color: white;
-}
+    top: 0px;
+    position: fixed;
+    width: 82%;
+    height: 35px;
+    padding: 22px 10px 62px 10px;
+    align-items: center;
+    text-align: center;
+    background: #ffffff;
 
 #tab{
 	color: white;
@@ -160,17 +159,12 @@ h2 {
 	color: white;
 }
 #newquery{
-	float: right;
-    margin-right: 10%;
-	font-size: 18px;
-	background-color: #1abc9c;
-	border: 1px solid #16a085;
-	border-width: 1px 1px 3px;
-	outline: 0;
-	background-color: #1abc9c;
-	height: 35px;
-	margin-bottom: 5%
-	color: white;
+    font-size: 18px;
+    border: 1px solid #16a085;
+    border-width: 1px 1px 3px;
+    outline: 0;
+    background-color: #1abc9c;
+    height: 35px;
 
 }
 .instruction{
