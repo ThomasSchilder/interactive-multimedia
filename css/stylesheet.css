@@ -103,7 +103,7 @@
 h2 {
 	font-size: 18px;
 }
-.results{
+.results, .lostart, .lootart, .herkomstgezocht, .rkd {
 	display: none;
 	margin-top: 4%;
 	margin-left: 10%;
@@ -111,6 +111,16 @@ h2 {
 }
 
 .navigation{
+<<<<<<< HEAD
+    top: 0px;
+    position: fixed;
+    width: 82%;
+    height: 35px;
+    padding: 22px 10px 62px 10px;
+    align-items: center;
+    text-align: center;
+    background: #ffffff;
+=======
 	top: 0px;
 	position: fixed;
 	width: 82%;
@@ -118,6 +128,8 @@ h2 {
 	padding: 10px;
 	align-items: center;
 	text-align: center;
+	background-color: white;
+>>>>>>> 4fc286028504e11cddcb3343870e1dbfdb86a95e
 }
 
 #tab{
@@ -153,17 +165,12 @@ h2 {
 	color: white;
 }
 #newquery{
-	float: right;
-    margin-right: 10%;
-	font-size: 18px;
-	background-color: #1abc9c;
-	border: 1px solid #16a085;
-	border-width: 1px 1px 3px;
-	outline: 0;
-	background-color: #1abc9c;
-	height: 35px;
-	margin-bottom: 5%
-	color: white;
+    font-size: 18px;
+    border: 1px solid #16a085;
+    border-width: 1px 1px 3px;
+    outline: 0;
+    background-color: #1abc9c;
+    height: 35px;
 
 }
 .instruction{

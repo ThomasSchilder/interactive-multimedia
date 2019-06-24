@@ -43,7 +43,7 @@ function searchLootedArt(){
 		&submit1=Search", function(data) {
 		htmlresults = new DOMParser().parseFromString(data, "text/html");
 		var table = htmlresults.getElementsByTagName('table')[0].innerHTML;
-		$('#results').append(table);
+		$('.lootart').append(table);
 		var a = document.getElementsByTagName("a");
         Array.from (a).forEach (((x) => { x.setAttribute("target", "_blank"); }) );
         var results = data.split("Your search returned ")[1].split(" results")[0];
@@ -73,7 +73,7 @@ function searchLootedArt(){
 			&submit1=Search&page=" + j.toString(), function(data) {
 		        htmlresults = new DOMParser().parseFromString(data, "text/html");
 		        var table = htmlresults.getElementsByTagName('table')[0].innerHTML;
-	        	$('#results').append(table);
+	        	$('.lootart').append(table);
 	        	var a = document.getElementsByTagName("a");
                 Array.from (a).forEach (((x) => { x.setAttribute("target", "_blank"); }) );
 	    	});
@@ -111,7 +111,7 @@ function searchLostart(){
 			htmlresults = new DOMParser().parseFromString(data, "text/html");
 			var tableEmpty = document.createElement("table");
 			tableEmpty.setAttribute("id", "emptyTable");
-			$('#results').append(tableEmpty);
+			$('.lostart').append(tableEmpty);
 		    var table = htmlresults.getElementsByTagName('tbody')[0].innerHTML;
 	        $('#emptyTable').append(table);
 	        var a = document.getElementsByTagName("a");
@@ -132,7 +132,7 @@ function searchLostart(){
 						htmlresults = new DOMParser().parseFromString(data, "text/html");
 						var tableEmpty = document.createElement("table");
 						tableEmpty.setAttribute("id", "emptyTable");
-						$('#results').append(tableEmpty);
+						$('.lostart').append(tableEmpty);
 					    var table = htmlresults.getElementsByTagName('tbody')[0].innerHTML;
 			    	    $('#emptyTable').append(table);
 			    	   var a = document.getElementsByTagName("a");
@@ -159,7 +159,7 @@ function searchHerkomstgezocht(fName, lName, title){
 	" + title + " " + fName + " " + lName, function(data) {
 		htmlresults = new DOMParser().parseFromString(data, "text/html");
 		var results = htmlresults.getElementsByTagName('ol')[0].innerHTML;
-	    $('#results').append(results);
+	    $('.herkomstgezocht').append(results);
 	    var a = document.getElementsByTagName("a");
         Array.from (a).forEach (((x) => { x.setAttribute("target", "_blank"); }) );
 
@@ -173,7 +173,7 @@ function searchHerkomstgezocht(fName, lName, title){
 			" + title + " " + fName + " " + lName + "?page=" + j.toString(), function(data) {
 				htmlresults = new DOMParser().parseFromString(data, "text/html");
 				var results = htmlresults.getElementsByTagName('ol')[0].innerHTML;
-				$('#results').append(results);
+				$('.herkomstgezocht').append(results);
 			    var a = document.getElementsByTagName("a");
 			    Array.from (a).forEach (((x) => { x.setAttribute("target", "_blank"); }) );
 			});
