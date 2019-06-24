@@ -83,7 +83,7 @@ function searchLootedArt(){
 
 function searchLostart(){
   let table = document.getElementsByTagName('tbody')[0];
-  if (table.rows.length > 0){
+  if (table.rows != undefined){
     return;
   }
   else{
