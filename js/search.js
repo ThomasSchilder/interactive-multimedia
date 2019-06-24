@@ -11,6 +11,10 @@ function searchAll(){
 }
 
 function searchLootedArt(){
+  document.getElementsByClassName('lostart')[0].style.display = 'none';
+  document.getElementsByClassName('lootedart')[0].style.display = 'none';
+  document.getElementsByClassName('herkomstgezocht')[0].style.display = 'none';
+  document.getElementsByClassName('rkd')[0].style.display = 'none';
   document.getElementsByClassName('instruction')[0].style.display = 'none';
   document.getElementsByClassName('lostresults')[0].style.display = 'none';
   document.getElementsByClassName('lootresults')[0].style.display = 'block';
@@ -82,6 +86,10 @@ function searchLootedArt(){
 }
 
 function searchLostart(){
+  document.getElementsByClassName('lostart')[0].style.display = 'block';
+  document.getElementsByClassName('lootedart')[0].style.display = 'none';
+  document.getElementsByClassName('herkomstgezocht')[0].style.display = 'none';
+  document.getElementsByClassName('rkd')[0].style.display = 'none';
   document.getElementsByClassName('instruction')[0].style.display = 'none';
   document.getElementsByClassName('lostresults')[0].style.display = 'block';
   document.getElementsByClassName('lootresults')[0].style.display = 'none';
@@ -140,6 +148,10 @@ function searchLostart(){
 }
 
 function searchHerkomstgezocht(fName, lName, title){
+  document.getElementsByClassName('lostart')[0].style.display = 'none';
+  document.getElementsByClassName('lootedart')[0].style.display = 'none';
+  document.getElementsByClassName('herkomstgezocht')[0].style.display = 'block';
+  document.getElementsByClassName('rkd')[0].style.display = 'none';
   document.getElementsByClassName('instruction')[0].style.display = 'none';
   document.getElementsByClassName('lostresults')[0].style.display = 'none';
   document.getElementsByClassName('lootresults')[0].style.display = 'none';
@@ -176,6 +188,10 @@ function searchHerkomstgezocht(fName, lName, title){
 }
 
 function searchRkd(fName, lName){
+  document.getElementsByClassName('lostart')[0].style.display = 'none';
+  document.getElementsByClassName('lootedart')[0].style.display = 'none';
+  document.getElementsByClassName('herkomstgezocht')[0].style.display = 'none';
+  document.getElementsByClassName('rkd')[0].style.display = 'block';
   document.getElementsByClassName('instruction')[0].style.display = 'none';
   document.getElementsByClassName('lostresults')[0].style.display = 'none';
   document.getElementsByClassName('lootresults')[0].style.display = 'none';
