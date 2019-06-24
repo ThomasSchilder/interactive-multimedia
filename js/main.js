@@ -18,6 +18,7 @@ function switchToSearch(){
 }
 
 function openNotes(){
+	document.getElementsByClassName('instruction')[0].style.display = 'none';
 	document.getElementsByClassName("lostart")[0].style.display = "none";
 	document.getElementsByClassName("lootart")[0].style.display = "none";
 	document.getElementsByClassName("herkomstgezocht")[0].style.display = "none";
