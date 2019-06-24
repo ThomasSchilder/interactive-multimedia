@@ -11,7 +11,7 @@ function searchAll(){
 }
 
 function searchLootedArt(){
-  if(document.getElementsByClassName('lootart')[0].getAttribute("alreadySearched") == "true"){
+  if(document.getElementsByClassName('lootart')[0].getAttribute("alreadySearched") == "false"){
   document.getElementsByClassName('lootart')[0].setAttribute("alreadySearched", "true");
   document.getElementsByClassName('instruction')[0].style.display = 'none';
   document.getElementsByClassName('lostart')[0].style.display = 'none';
