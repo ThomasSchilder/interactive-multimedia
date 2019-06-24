@@ -110,8 +110,13 @@ h2 {
 	margin-right: 10%;
 }
 
+.lostart, .lootart, .herkomstgezocht, .rkd {
+	background-color: #ddd;
+	margin 0 auto;
+	width: 50%;
+}
+
 .navigation{
-<<<<<<< HEAD
     top: 0px;
     position: fixed;
     width: 82%;
@@ -120,17 +125,6 @@ h2 {
     align-items: center;
     text-align: center;
     background: #ffffff;
-=======
-	top: 0px;
-	position: fixed;
-	width: 82%;
-	height: 35px;
-	padding: 10px;
-	align-items: center;
-	text-align: center;
-	background-color: white;
->>>>>>> 4fc286028504e11cddcb3343870e1dbfdb86a95e
-}
 
 #tab{
 	color: white;
