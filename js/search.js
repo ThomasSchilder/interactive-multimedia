@@ -82,27 +82,32 @@ function searchLootedArt(){
 }
 
 function searchLostart(){
-  document.getElementsByClassName('instruction')[0].style.display = 'none';
-  document.getElementsByClassName('lostart')[0].style.display = 'block';
-  document.getElementsByClassName('lootart')[0].style.display = 'none';
-  document.getElementsByClassName('herkomstgezocht')[0].style.display = 'none';
-  document.getElementsByClassName('rkd')[0].style.display = 'none';
-  document.getElementById("results").innerHTML = '<table><caption id="resultsAmount"></caption></table><br>';
-  var fName = document.getElementById("fName").value;
-  var lName = document.getElementById("lName").value;
-  var title = document.getElementById("title").value;
-  var authority = document.getElementById("authority").value;
-	$.get("https://cors-anywhere.herokuapp.com/http://www.lostart.de/Webs/EN/Datenbank/SucheDetail/SucheMeldungDetail.html?resourceId=7398&input_=7332&pageLocale=en\
-	&titelbesch=" + title + "\
-	&person=" + fName + " " + lName + "\
-	&objektart=-1\
-	&objektart.GROUP=1\
-	&mattech=\
-	&datierung=\
-	&provenienz=\
-	&instsamml=" + authority + "\
-	&kennz=\
-	&id=+477958&pubop=eq&pubop.GROUP=1&pubyear=&pubyear.GROUP=1&type.GROUP=1&suche_typ=MeldungDetail&suche_typ.HASH=1f7be21bf284266ab474&suchen=Search", function(data) {
+  let table = document.getElementsByTagName('tbody')[0];
+  if (table.rows.length > 0){
+    return;
+  }
+  else{
+    document.getElementsByClassName('instruction')[0].style.display = 'none';
+    document.getElementsByClassName('lostart')[0].style.display = 'block';
+    document.getElementsByClassName('lootart')[0].style.display = 'none';
+    document.getElementsByClassName('herkomstgezocht')[0].style.display = 'none';
+    document.getElementsByClassName('rkd')[0].style.display = 'none';
+    document.getElementById("results").innerHTML = '<table><caption id="resultsAmount"></caption></table><br>';
+    var fName = document.getElementById("fName").value;
+    var lName = document.getElementById("lName").value;
+    var title = document.getElementById("title").value;
+    var authority = document.getElementById("authority").value;
+	   $.get("https://cors-anywhere.herokuapp.com/http://www.lostart.de/Webs/EN/Datenbank/SucheDetail/SucheMeldungDetail.html?resourceId=7398&input_=7332&pageLocale=en\
+	    &titelbesch=" + title + "\
+	    &person=" + fName + " " + lName + "\
+	    &objektart=-1\
+	    &objektart.GROUP=1\
+      &mattech=\
+      &datierung=\
+      &provenienz=\
+      &instsamml=" + authority + "\
+      &kennz=\
+      &id=+477958&pubop=eq&pubop.GROUP=1&pubyear=&pubyear.GROUP=1&type.GROUP=1&suche_typ=MeldungDetail&suche_typ.HASH=1f7be21bf284266ab474&suchen=Search", function(data) {
 			htmlresults = new DOMParser().parseFromString(data, "text/html");
 			var tableEmpty = document.createElement("table");
 			tableEmpty.setAttribute("id", "emptyTable");
@@ -136,7 +141,8 @@ function searchLostart(){
 				}, (3000 * k));
             }
             }
-	});
+	         });
+         }
 }
 
 function searchHerkomstgezocht(fName, lName, title){
