@@ -103,7 +103,7 @@
 h2 {
 	font-size: 18px;
 }
-.results{
+.results, .lostart, .lootart, .herkomstgezocht, .rkd {
 	display: none;
 	margin-top: 4%;
 	margin-left: 10%;
