@@ -30,7 +30,7 @@ function openNotes(){
 window.onscroll = function() {myFunction()};
 
 // Get the navbar
-var navbar = document.getElementsByClassName("navigation")[0];
+var navbar = document.getElementById("navigation");
 
 // Get the offset position of the navbar
 var sticky = navbar.offsetTop;
